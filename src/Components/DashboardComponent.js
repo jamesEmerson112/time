@@ -1,7 +1,13 @@
 import './DashboardComponent.css';
 import React, {useEffect, useState} from 'react';
 
-// const fakeData = process.env.FAKEDATA;
+const fakeData = {
+  'Age': 40,
+  'dailyWorkHrs': 8,
+  'dailyChoresHrs': 2,
+  'dailyTransportationHrs': 1,
+  'numberOfDaysOff': 2,
+};
 
 function DashboardComponent() {
   // const pressSubmit = (e) => {
@@ -9,7 +15,7 @@ function DashboardComponent() {
   //   console.log('hello');
   // }
 
-  // console.log(fakeData);
+  console.log(fakeData);
 
   return (
     <div className="DashboardComponent">

@@ -10,7 +10,7 @@ function App() {
 
       <div>
         <DashboardComponent />
-        <DashboardComponent />
+        {/* <DashboardComponent /> */}
       </div>
     </div>
   );
