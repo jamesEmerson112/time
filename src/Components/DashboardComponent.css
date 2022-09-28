@@ -46,3 +46,11 @@
   height: 100px;
   background-color: red;
 }
+
+.ReportComponent {
+  /* white-space: nowrap; */
+}
+
+.Test{
+  /* display: inline-block; */
+}
