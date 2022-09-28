@@ -13,11 +13,11 @@ function FirstComponent() {
         <h2>CREATE AN ENTRY</h2>
         <p type="Number"><input type="text" name="age" placeholder="Enter your age here."></input></p>
 
-        <p type="Number"><input type="text" name="weeklyWorkHrs" placeholder="Enter your daily work hours"></input></p>
+        <p type="Number"><input type="text" name="dailyWorkHrs" placeholder="Enter your daily work hours"></input></p>
 
         <p type="Number"><input type="text" name="dailyChoresHrs" placeholder="Enter your daily chore hours"></input></p>
 
-        <p type="Number"><input type="text" name="dailyChoresHrs" placeholder="Enter your daily transportation hours"></input></p>
+        <p type="Number"><input type="text" name="dailyTransportationHrs" placeholder="Enter your daily transportation hours"></input></p>
 
         <input className="button" type="submit" value="Submit" onClick={pressSubmit}/>
       </form>
