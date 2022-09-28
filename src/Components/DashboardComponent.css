@@ -1,7 +1,7 @@
 .DashboardComponent {
-  width:50%;
+  width:90%;
   height:100%;
-  background:#e6e6e6;
+  background:#c7b1b1;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;
   margin:calc(50vh - 220px) auto;
@@ -10,4 +10,39 @@
   box-sizing:border-box;
   font-family:'Montserrat',sans-serif;
   position:relative
+}
+
+.UserLifespanDashboard {
+  width:auto;
+  height:100%;
+  background:#993535;
+  border-radius:8px;
+  box-shadow:0 0 40px -10px #000;
+  margin:calc(50vh - 220px) auto;
+  padding:20px 30px;
+  max-width: 100%;
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+  position:relative
+}
+
+.ReportComponent {
+  width:auto;
+  height:100%;
+  background:#de5c5c;
+  border-radius:8px;
+  box-shadow:0 0 40px -10px #000;
+  margin:calc(50vh - 220px) auto;
+  padding:20px 30px;
+  max-width: 100%;
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+  position:relative
+}
+
+.square {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }

@@ -1,5 +1,10 @@
 import './DashboardComponent.css';
 import React, {useEffect, useState} from 'react';
+import ExtraInputInfoComponent from './DashboardComponents/ExtraInputInfoComponent';
+import ReportComponent from './DashboardComponents/ReportComponent';
+import UserInfoComponent from './DashboardComponents/UserInfoComponent';
+import UserLifespanDashboard from './DashboardComponents/UserLifespanDashboard';
+
 
 const fakeData = {
   'Age': 40,
@@ -20,6 +25,10 @@ function DashboardComponent() {
   return (
     <div className="DashboardComponent">
       <p>Dashboard right here</p>
+      <UserLifespanDashboard />
+      <ReportComponent />
+      {/* <UserLifespanDashboard /> */}
+      {/* <UserLifespanDashboard /> */}
 
     </div>
   );

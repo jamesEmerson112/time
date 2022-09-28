@@ -19,6 +19,8 @@ function FirstComponent() {
 
         <p type="Number"><input type="text" name="dailyTransportationHrs" placeholder="Enter your daily transportation hours"></input></p>
 
+        <p type="Number"><input type="text" name="numberOfDaysOff" placeholder="Enter the number of your days off"></input></p>
+
         <input className="button" type="submit" value="Submit" onClick={pressSubmit}/>
       </form>
     </div>
