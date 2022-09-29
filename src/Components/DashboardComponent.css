@@ -37,7 +37,8 @@
   max-width: 100%;
   box-sizing:border-box;
   font-family:'Montserrat',sans-serif;
-  position:relative
+  position:relative;
+  text-align: left;
 }
 
 .square {
@@ -47,10 +48,11 @@
   background-color: red;
 }
 
-.ReportComponent {
-  /* white-space: nowrap; */
+/* .ReportComponent {
+  white-space: nowrap;
 }
 
 .Test{
-  /* display: inline-block; */
-}
+  display: ;
+  margin: 10px;
+} */

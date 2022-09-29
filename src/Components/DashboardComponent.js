@@ -20,13 +20,11 @@ function DashboardComponent() {
   //   console.log('hello');
   // }
 
-  console.log(fakeData);
-
   return (
     <div className="DashboardComponent">
       <p>Dashboard right here</p>
-      <UserLifespanDashboard />
-      <ReportComponent />
+      <UserLifespanDashboard fakeData={fakeData}/>
+      <ReportComponent fakeData={fakeData}/>
       {/* <UserLifespanDashboard /> */}
       {/* <UserLifespanDashboard /> */}
 

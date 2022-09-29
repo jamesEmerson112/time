@@ -1,41 +1,74 @@
-import React from "react";
-import {BsFillSquareFill} from "react-icons/bs";
+import React from 'react';
+import {BsFillSquareFill} from 'react-icons/bs';
 import '../DashboardComponent.css';
 
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
+const EIGHTTEEN_YEARS = 18;
+const DAYS_OF_ONE_YEAR = 365;
+const DAYS_OF_ONE_WEEK = 7;
+const HOURS_OF_ONE_DAY = 24;
+const WEEKS_OF_ONE_YEAR = 52;
+const WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME =
+620; // 18 years = 620 weeks =
+
+/**
+ * Display the Report Dashboard.
+ * @param {fakeData} props
+ * @return nothing
+ */
+export default function ReportComponent(props) {
+  console.log(props);
+  const {fakeData} = props;
+  let test = '';
+
+  // calculate parent's left over time
+  const minimumDailySleepHrs = 8;
+  const leftoverHrs = 24 -
+                      fakeData.dailyWorkHrs -
+                      fakeData.dailyChoresHrs -
+                      fakeData.dailyTransportationHrs -
+                      minimumDailySleepHrs;
+
+  const daysOffHrs = (fakeData.numberOfDaysOff *
+    (HOURS_OF_ONE_DAY - 8 - fakeData.dailyChoresHrs)) *
+  WEEKS_OF_ONE_YEAR;
+
+  const totalLeftoverHrs = DAYS_OF_ONE_YEAR * EIGHTTEEN_YEARS * leftoverHrs +
+  daysOffHrs* EIGHTTEEN_YEARS;
+
+  console.log('totalLeftoverHrs ', totalLeftoverHrs);
+  const totalLeftoverWeeks = totalLeftoverHrs /
+  (HOURS_OF_ONE_DAY * DAYS_OF_ONE_WEEK);
+
+  let percentageOfParentBeingPresent = totalLeftoverWeeks /
+  WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME * 100;
+  percentageOfParentBeingPresent = Math.round(percentageOfParentBeingPresent);
+
+  console.log('totalLeftoverWeeks ', totalLeftoverWeeks);
+
+  // 18 years === 620 weeks
+  const weeksWithoutParent = WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME -
+  totalLeftoverWeeks;
+  for (let i = 0; i < totalLeftoverWeeks; i += 1) {
+    test += '| ';
   }
-}
-
-class LinkedList {
-  constructor() {
-    this.head = null;
-    this.tail = null;
-  }
-}
-
-
-
-
-export default function ReportComponent () {
-  let test = [];
-  for (let i = 0; i < 4343; i += 1) {
-    test.push(<BsFillSquareFill key={i}></BsFillSquareFill>);
+  for (let i = 0; i < weeksWithoutParent; i += 1) {
+    // test.push(
+    // <BsFillSquareFill key={i}>{" "}</BsFillSquareFill>
+    // );
+    test += '. ';
   }
 
-  console.log(test);
-
-  return(
+  return (
     <div className="ReportComponent">
       <p>Report info</p>
+      <p>Children are awake for 620 weeks within 18 years</p>
       <div className="ReportComponent Test">
-        {test.map((item, index) => {
-          return item;
-        })}
+        <p>
+          {test}
+        </p>
       </div >
+      <p>You are there for {percentageOfParentBeingPresent} % of your child's life</p>
     </div>
-  )
+  );
 }
 
