@@ -14,11 +14,13 @@ const fakeData = {
   'numberOfDaysOff': 2,
 };
 
-function DashboardComponent() {
+function DashboardComponent(props) {
   // const pressSubmit = (e) => {
   //   e.preventDefault();
   //   console.log('hello');
   // }
+
+  console.log('DashboardComponent props data ', props)
 
   return (
     <div className="DashboardComponent">

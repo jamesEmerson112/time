@@ -1,15 +1,12 @@
 import './FirstComponent.css';
 import React, { useState, useEffect } from 'react';
 
-function FirstComponent() {
+function FirstComponent(props) {
+  // DISSECTING PROPS
+  const { onHandleData } = props;
+
   // VARIABLES
-  const [data, setData] = useState({
-    "age": "",
-    "dailyWorkHrs":"",
-    "dailyChoresHrs":"",
-    "dailyTransportationHrs":"",
-    "numberOfDaysOff":""
-  });
+  const [data, setData] = useState({});
 
   // FUNCTION
   const onChangeHandler = (event) => {
@@ -22,7 +19,7 @@ function FirstComponent() {
   }
   const pressSubmit = (e) => {
     e.preventDefault();
-    console.log('data ', data);
+    onHandleData(data);
   }
 
   return (

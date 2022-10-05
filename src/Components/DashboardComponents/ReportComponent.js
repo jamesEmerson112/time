@@ -16,7 +16,7 @@ const WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME =
  * @return nothing
  */
 export default function ReportComponent(props) {
-  console.log(props);
+  // console.log(props);
   const {fakeData} = props;
   let test = '';
 
@@ -35,7 +35,7 @@ export default function ReportComponent(props) {
   const totalLeftoverHrs = DAYS_OF_ONE_YEAR * EIGHTTEEN_YEARS * leftoverHrs +
   daysOffHrs* EIGHTTEEN_YEARS;
 
-  console.log('totalLeftoverHrs ', totalLeftoverHrs);
+  // console.log('totalLeftoverHrs ', totalLeftoverHrs);
   const totalLeftoverWeeks = totalLeftoverHrs /
   (HOURS_OF_ONE_DAY * DAYS_OF_ONE_WEEK);
 
@@ -43,7 +43,7 @@ export default function ReportComponent(props) {
   WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME * 100;
   percentageOfParentBeingPresent = Math.round(percentageOfParentBeingPresent);
 
-  console.log('totalLeftoverWeeks ', totalLeftoverWeeks);
+  // console.log('totalLeftoverWeeks ', totalLeftoverWeeks);
 
   // 18 years === 620 weeks
   const weeksWithoutParent = WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME -
