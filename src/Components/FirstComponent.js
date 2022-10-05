@@ -1,5 +1,7 @@
 import './FirstComponent.css';
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-scroll";
+
 
 function FirstComponent(props) {
   // DISSECTING PROPS
@@ -23,7 +25,7 @@ function FirstComponent(props) {
   }
 
   return (
-    <div className="FirstComponent">
+    <div className="FirstComponent" >
        {/* <form className="form" action="/" method="post"> */}
        <form className="form" >
         <h2>CREATE AN ENTRY</h2>

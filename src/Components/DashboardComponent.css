@@ -1,7 +1,7 @@
 .DashboardComponent {
   width:90%;
   height:100%;
-  background:#c7b1b1;
+  background:#7ade5c;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;
   margin:calc(50vh - 220px) auto;
@@ -14,7 +14,7 @@
 
 .UserLifespanDashboard {
   width:auto;
-  height:100%;
+  height:auto;
   background:#993535;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;
@@ -27,8 +27,8 @@
 }
 
 .ReportComponent {
-  width:50%;
-  height:100%;
+  width:auto;
+  height:auto;
   background:#7ade5c;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;

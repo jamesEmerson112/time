@@ -20,14 +20,16 @@ function DashboardComponent(props) {
   //   console.log('hello');
   // }
 
+  const { data } = props;
+
   console.log('DashboardComponent props data ', props)
 
   return (
     <div className="DashboardComponent">
       <p>Dashboard right here</p>
-      <ReportComponent fakeData={fakeData}/>
+      <ReportComponent fakeData={fakeData} data={data}/>
 
-      <UserLifespanDashboard fakeData={fakeData}/>
+      {/* <UserLifespanDashboard fakeData={fakeData} data={data}/> */}
       {/* <UserLifespanDashboard /> */}
       {/* <UserLifespanDashboard /> */}
 

@@ -15,10 +15,8 @@ function App() {
     <div className="App">
       <FirstComponent onHandleData={onHandleData}/>
 
-      <div>
-        <DashboardComponent data={data}/>
+      <DashboardComponent data={data}/>
         {/* <DashboardComponent /> */}
-      </div>
     </div>
   );
 }

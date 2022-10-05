@@ -1,6 +1,7 @@
 import React from 'react';
 import {BsFillSquareFill} from 'react-icons/bs';
 import '../DashboardComponent.css';
+import { Link } from "react-scroll";
 
 const EIGHTTEEN_YEARS = 18;
 const DAYS_OF_ONE_YEAR = 365;
@@ -17,19 +18,22 @@ const WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME =
  */
 export default function ReportComponent(props) {
   // console.log(props);
-  const {fakeData} = props;
+  const {data} = props;
+  if(!data) {
+    return;
+  }
   let test = '';
 
   // calculate parent's left over time
   const minimumDailySleepHrs = 8;
   const leftoverHrs = 24 -
-                      fakeData.dailyWorkHrs -
-                      fakeData.dailyChoresHrs -
-                      fakeData.dailyTransportationHrs -
+                      data.dailyWorkHrs -
+                      data.dailyChoresHrs -
+                      data.dailyTransportationHrs -
                       minimumDailySleepHrs;
 
-  const daysOffHrs = (fakeData.numberOfDaysOff *
-    (HOURS_OF_ONE_DAY - 8 - fakeData.dailyChoresHrs)) *
+  const daysOffHrs = (data.numberOfDaysOff *
+    (HOURS_OF_ONE_DAY - 8 - data.dailyChoresHrs)) *
   WEEKS_OF_ONE_YEAR;
 
   const totalLeftoverHrs = DAYS_OF_ONE_YEAR * EIGHTTEEN_YEARS * leftoverHrs +
@@ -59,15 +63,17 @@ export default function ReportComponent(props) {
   }
 
   return (
-    <div className="ReportComponent">
-      <p>Report info</p>
-      <p>Children are awake for 620 weeks within 18 years</p>
-      <div className="ReportComponent Test">
+
+
+    <div className="ReportComponent" id='id'>
+
+        <p>Report info</p>
+        <p>Out of free time, you may spend maximum {totalLeftoverWeeks} with your future children</p>
+        <p>Children are awake for 620 weeks within 18 years</p>
         <p>
           {test}
         </p>
-      </div >
-      <p>You are there for {percentageOfParentBeingPresent} % of your child's life</p>
+        <p>You are there for {percentageOfParentBeingPresent} % of your child's life</p>
     </div>
   );
 }
