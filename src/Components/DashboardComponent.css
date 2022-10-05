@@ -27,9 +27,9 @@
 }
 
 .ReportComponent {
-  width:auto;
+  width:50%;
   height:100%;
-  background:#de5c5c;
+  background:#7ade5c;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;
   margin:calc(50vh - 220px) auto;
@@ -48,11 +48,9 @@
   background-color: red;
 }
 
-/* .ReportComponent {
-  white-space: nowrap;
-}
+
 
 .Test{
-  display: ;
-  margin: 10px;
-} */
+  width: auto;
+  padding: 2% 5%;
+}

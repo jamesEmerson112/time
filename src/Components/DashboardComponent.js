@@ -23,8 +23,9 @@ function DashboardComponent() {
   return (
     <div className="DashboardComponent">
       <p>Dashboard right here</p>
-      <UserLifespanDashboard fakeData={fakeData}/>
       <ReportComponent fakeData={fakeData}/>
+
+      <UserLifespanDashboard fakeData={fakeData}/>
       {/* <UserLifespanDashboard /> */}
       {/* <UserLifespanDashboard /> */}
 
