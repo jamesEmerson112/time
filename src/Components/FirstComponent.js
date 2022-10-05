@@ -1,6 +1,5 @@
 import './FirstComponent.css';
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-scroll";
 
 
 function FirstComponent(props) {

@@ -1,7 +1,6 @@
 import React from 'react';
 import {BsFillSquareFill} from 'react-icons/bs';
 import '../DashboardComponent.css';
-import { Link } from "react-scroll";
 
 const EIGHTTEEN_YEARS = 18;
 const DAYS_OF_ONE_YEAR = 365;
