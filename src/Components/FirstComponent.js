@@ -21,27 +21,27 @@ function FirstComponent(props) {
   const pressSubmit = (e) => {
     e.preventDefault();
     onHandleData(data);
-    document.getElementById("id-dashboard").scrollIntoView();
+    document.getElementById("id-report").scrollIntoView();
   }
 
   return (
     <div className="FirstComponent" >
        {/* <form className="form" action="/" method="post"> */}
        <form className="form" >
-        <h2>CREATE AN ENTRY</h2>
+        <h2>CHOOSE WHEN YOU'D LIKE TO HAVE KIDS</h2>
         <p type="Number"><input type="text" name="age" placeholder="Enter your age here."
         onChange={onChangeHandler}></input></p>
 
-        <p type="Number"><input type="text" name="dailyWorkHrs" placeholder="Enter your daily work hours"
+        <p type="Number"><input type="text" name="dailyWorkHrs" placeholder="Enter your daily work hours."
         onChange={onChangeHandler}></input></p>
 
-        <p type="Number"><input type="text" name="dailyChoresHrs" placeholder="Enter your daily chore hours"
+        <p type="Number"><input type="text" name="dailyChoresHrs" placeholder="Enter your daily chore hours."
         onChange={onChangeHandler}></input></p>
 
-        <p type="Number"><input type="text" name="dailyTransportationHrs" placeholder="Enter your daily transportation hours"
+        <p type="Number"><input type="text" name="dailyTransportationHrs" placeholder="Enter your daily transportation hours."
         onChange={onChangeHandler}></input></p>
 
-        <p type="Number"><input type="text" name="numberOfDaysOff" placeholder="Enter the number of your days off"
+        <p type="Number"><input type="text" name="numberOfDaysOff" placeholder="Enter the number of your days off."
         onChange={onChangeHandler}></input></p>
         <input
         className="button"

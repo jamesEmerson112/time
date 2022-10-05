@@ -7,8 +7,8 @@ const DAYS_OF_ONE_YEAR = 365;
 const DAYS_OF_ONE_WEEK = 7;
 const HOURS_OF_ONE_DAY = 24;
 const WEEKS_OF_ONE_YEAR = 52;
-const WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME =
-620; // 18 years = 620 weeks =
+const WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME = Math.round(
+((24*365*18 - (16*365) - (14*365) - (13*365*3) - (12*365*7) - (10*365*6)) / 24 / 7)); // 18 years = 620 weeks =
 
 /**
  * Display the Report Dashboard.
@@ -39,12 +39,16 @@ export default function ReportComponent(props) {
   daysOffHrs* EIGHTTEEN_YEARS;
 
   // console.log('totalLeftoverHrs ', totalLeftoverHrs);
-  const totalLeftoverWeeks = totalLeftoverHrs /
+  let totalLeftoverWeeks = totalLeftoverHrs /
   (HOURS_OF_ONE_DAY * DAYS_OF_ONE_WEEK);
+
+  totalLeftoverWeeks = Math.round(totalLeftoverWeeks);
 
   let percentageOfParentBeingPresent = totalLeftoverWeeks /
   WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME * 100;
   percentageOfParentBeingPresent = Math.round(percentageOfParentBeingPresent);
+
+  const totalLeftoverYears = totalLeftoverWeeks / 52;
 
   // console.log('totalLeftoverWeeks ', totalLeftoverWeeks);
 
@@ -64,15 +68,17 @@ export default function ReportComponent(props) {
   return (
 
 
-    <div className="ReportComponent">
+    <div className="ReportComponent" id="id-report">
+      <form>
 
         <p>Report info</p>
-        <p>Out of free time, you may spend maximum {totalLeftoverWeeks} with your future children</p>
-        <p>Children are awake for 620 weeks within 18 years</p>
+        <p>Out of free time, you may spend maximum {totalLeftoverWeeks} weeks with your future children</p>
+        <p>Children are awake for {WEEKS_OF_EIGHT_TEEN_YEARS_EXCLUDING_SLEEP_TIME} weeks within 18 years</p>
         <p>
           {test}
         </p>
         <p>You are there for {percentageOfParentBeingPresent} % of your child's life</p>
+      </form>
     </div>
   );
 }

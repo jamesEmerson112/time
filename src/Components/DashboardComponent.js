@@ -25,7 +25,7 @@ function DashboardComponent(props) {
   console.log('DashboardComponent props data ', props)
 
   return (
-    <div className="DashboardComponent"  id="id-dashboard">
+    <div className="DashboardComponent"  >
 
       <p>Dashboard right here</p>
       <ReportComponent fakeData={fakeData} data={data}/>
