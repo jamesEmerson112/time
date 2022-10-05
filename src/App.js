@@ -13,9 +13,9 @@ function App() {
 
   return (
     <div className="App">
-      <FirstComponent onHandleData={onHandleData}/>
+        <FirstComponent onHandleData={onHandleData}/>
 
-      <DashboardComponent data={data}/>
+        <DashboardComponent className="scroll-page"  data={data}/>
         {/* <DashboardComponent /> */}
     </div>
   );

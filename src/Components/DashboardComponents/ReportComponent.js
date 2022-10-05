@@ -64,7 +64,7 @@ export default function ReportComponent(props) {
   return (
 
 
-    <div className="ReportComponent" id='id'>
+    <div className="ReportComponent">
 
         <p>Report info</p>
         <p>Out of free time, you may spend maximum {totalLeftoverWeeks} with your future children</p>

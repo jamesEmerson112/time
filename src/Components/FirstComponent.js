@@ -42,7 +42,6 @@ function FirstComponent(props) {
 
         <p type="Number"><input type="text" name="numberOfDaysOff" placeholder="Enter the number of your days off"
         onChange={onChangeHandler}></input></p>
-
         <input className="button" type="submit" value="Submit" onClick={pressSubmit}/>
       </form>
     </div>
