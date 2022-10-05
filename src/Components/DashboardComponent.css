@@ -1,20 +1,6 @@
 .DashboardComponent {
   width:90%;
   height:100%;
-  background:#7ade5c;
-  border-radius:8px;
-  box-shadow:0 0 40px -10px #000;
-  margin:calc(50vh - 220px) auto;
-  padding:20px 30px;
-  max-width: 100%;
-  box-sizing:border-box;
-  font-family:'Montserrat',sans-serif;
-  position:relative
-}
-
-.form {
-  width:340px;
-  height:440px;
   background: #191c29;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;
@@ -24,26 +10,20 @@
   box-sizing:border-box;
   font-family:'Montserrat',sans-serif;
   position:relative;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: rgb(88 199 250 / 0%);
-  cursor: pointer;
-  font-family: cursive;
+  color:antiquewhite;
 }
 
-
-.form:hover {
-  color: rgb(88 199 250 / 100%);
+.DashboardComponent:hover {
+  color: white;
   transition: color 1s;
 }
-.form:hover:before, .form:hover:after {
+.DashboardComponent:hover:before, .DashboardComponent:hover:after {
   animation: none;
   opacity: 0;
 }
 
 
-.form::before {
+.DashboardComponent::before {
   content: "";
   width: 104%;
   height: 102%;
@@ -58,7 +38,7 @@
     animation: spin 2.5s linear infinite;
 }
 
-.form::after {
+.DashboardComponent::after {
   position: absolute;
   content: "";
   top: calc(var(--card-height) / 6);
@@ -104,7 +84,7 @@
 .ReportComponent {
   width:auto;
   height:auto;
-  background:#7ade5c;
+  background: #191c29;
   border-radius:8px;
   box-shadow:0 0 40px -10px #000;
   margin:calc(50vh - 220px) auto;

@@ -31,12 +31,13 @@ export default function ReportComponent(props) {
                       data.dailyTransportationHrs -
                       minimumDailySleepHrs;
 
-  const daysOffHrs = (data.numberOfDaysOff *
+  const daysOffHrsOfOneYear = (data.numberOfDaysOff *
     (HOURS_OF_ONE_DAY - 8 - data.dailyChoresHrs)) *
   WEEKS_OF_ONE_YEAR;
 
-  const totalLeftoverHrs = DAYS_OF_ONE_YEAR * EIGHTTEEN_YEARS * leftoverHrs +
-  daysOffHrs* EIGHTTEEN_YEARS;
+  const daysOffOfOneYear = data.numberOfDaysOff * 52;
+  const totalLeftoverHrs = (DAYS_OF_ONE_YEAR - daysOffOfOneYear) * EIGHTTEEN_YEARS * leftoverHrs +
+  daysOffHrsOfOneYear* EIGHTTEEN_YEARS;
 
   // console.log('totalLeftoverHrs ', totalLeftoverHrs);
   let totalLeftoverWeeks = totalLeftoverHrs /
@@ -69,7 +70,6 @@ export default function ReportComponent(props) {
 
 
     <div className="ReportComponent" id="id-report">
-      <form>
 
         <p>Report info</p>
         <p>Out of free time, you may spend maximum {totalLeftoverWeeks} weeks with your future children</p>
@@ -78,7 +78,6 @@ export default function ReportComponent(props) {
           {test}
         </p>
         <p>You are there for {percentageOfParentBeingPresent} % of your child's life</p>
-      </form>
     </div>
   );
 }
